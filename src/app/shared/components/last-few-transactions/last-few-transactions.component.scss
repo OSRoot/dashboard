@@ -1,0 +1,70 @@
+.transactions{
+  .transaction-wrapper{
+    overflow: auto;
+    height: 185px;
+
+  }
+  .title{
+    padding: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #333333;
+    font-size: 18px;
+    font-family: "semibold";
+  }
+  .transaction{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: 1px solid #eee;
+    .image{
+      width: 55px;
+      img{
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+      }
+    }
+    .title{
+      padding: 10px;
+      font-size: 16px;
+      width: 190px;
+      font-family: "regular";
+    }
+    .price{
+      padding: 10px;
+      font-size: 16px;
+      width: 190px;
+      font-family: "regular";
+    }
+    .shop-location{
+      padding: 10px;
+      font-size: 16px;
+      width: 190px;
+      font-family: "regular";
+      .location{
+        padding: 0 5px;
+        color: gray;
+        font-size: 15px;
+        font-family: "regular";
+
+      }
+    }
+    .status{
+      // padding: 10px;
+      font-size: 16px;
+      // width: 190px;
+      font-family: "semibold";
+      &.confirmed{
+        color: #6920fb;
+      }
+      &.pending{
+        color: #7e0505;
+      }
+      &.shipped{
+        color: #044342;
+      }
+    }
+  }
+
+}

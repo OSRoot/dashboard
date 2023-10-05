@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "ar-light";
+  src: url('./assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Light.ttf');
+}
+@font-face {
+  font-family: "ar-bold";
+  src: url('./assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Bold.ttf');
+}
+@font-face {
+  font-family: "ar-medium";
+  src: url('./assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.ttf');
+}
+
+@font-face {
+  font-family: "ar-semibold";
+  src: url('./assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "ar-thin";
+  src: url('./assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Thin.ttf');
+}
+
+@font-face {
+  font-family: "ar-regular";
+  src: url('./assets/fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf');
+}
+
+@font-face {
+  font-family: "regular";
+  src: url('./assets/fonts/Fira_Sans/FiraSans-Regular.ttf');
+};
+@font-face {
+  font-family: "medium";
+  src: url('./assets/fonts/Fira_Sans/FiraSans-Medium.ttf');
+}
+@font-face {
+  font-family: "semibold";
+  src: url('./assets/fonts/Fira_Sans/FiraSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "bold";
+  src: url('./assets/fonts/Fira_Sans/FiraSans-Bold.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a5a81;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #012645;
+}
+
