@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SeoService } from './core/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard';
- 
+  constructor(
+    private  seo:SeoService
+  ){
+    this.seo.initDefaultMetaInformation()
+  }
+
+
 }
