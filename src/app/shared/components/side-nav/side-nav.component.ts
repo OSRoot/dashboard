@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faBox, faChartBar, faCoffee,faContactBook,faDashboard,faHand,faHome, faLocation, faMoneyBill, faShop } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,6 +8,7 @@ import { faBox, faChartBar, faCoffee,faContactBook,faDashboard,faHand,faHome, fa
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent {
+
   faCoffee = faCoffee;
   faHome = faHome;
   faLocation=faLocation;
@@ -17,4 +19,14 @@ export class SideNavComponent {
   faChartBar=faChartBar;
   faContactBook=faContactBook;
   faHand=faHand;
+
+////////////////////////////////////////////////////////////////////////////
+constructor(
+  private router:Router
+){}
+
+    ///////////// Method to help Activate the Tab ////////////
+    isActive(route:string):boolean{
+      return this.router.isActive(route, false)
+      }
 }

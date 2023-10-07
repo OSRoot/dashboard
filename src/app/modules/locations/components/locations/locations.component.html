@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="main-container">
+    <div class="side-nav">
+      <app-side-nav></app-side-nav>
+    </div>
+    <div class="main">
+      <!-- Start the map here -->
+      <google-map width="1000px" height="1000px" [center]="center" [zoom]="zoom"
+      (mapClick)="addMarker($event)"
+      (mapMousemove)="move($event)"
+      >
+
+      <!-- Add marker functionality -->
+      <map-marker
+      #marker="mapMarker"
+      *ngFor="let mPos of markerPositions"
+      [position]="mPos"
+      [options]="markerOptions"
+      (mapClick)="openInfoWindow(marker)"
+    >
+
+        <!-- When clicked show the map info of the location -->
+        <map-info-window >
+          <div class="marker-window">
+            <h3>
+              This is a location you selected
+            </h3>
+            <div class="options">
+              <button (click)="deleteMark(mPos)">Delete</button>
+            </div>
+          </div>
+        </map-info-window>
+      </map-marker>
+
+    <!-- <map-polyline [path]="vertices"></map-polyline>
+    <map-polygon [paths]="vertices"></map-polygon>
+    <map-circle [center]="circleCenter" [radius]="radius"></map-circle>
+    <map-rectangle [bounds]="bordersOrBounds"></map-rectangle>
+    <map-ground-overlay [url]="imageUrl" [bounds]="bordersOrBounds"></map-ground-overlay> -->
+    </google-map>
+    <!-- End of Google Maps -->
+    </div>
+
+    <div class="lglt">
+      <div>Longitude: {{display.lng}}</div>
+      <div>Latitude: {{display.lat}}</div>
+    </div>
+  </div>
+</div>

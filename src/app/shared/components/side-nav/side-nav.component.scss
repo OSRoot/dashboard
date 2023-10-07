@@ -79,5 +79,8 @@
     }
     transition: 0.2s;
   }
+  .nav-item.active{
+    background-color: rgb(1, 38, 69);;
+  }
   transition: 0.2s;
 }
