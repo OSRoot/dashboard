@@ -6,24 +6,33 @@
     <div class="side-nav">
       <app-side-nav></app-side-nav>
     </div>
+
     <div class="main">
+      <!-- <div class="search-loc">
+        <form>
+          <label for="search"></label>
+          <input type="search" name="search" id="search">
+          <button type="submit" (click)="findAddress()">Search</button>
+        </form>
+      </div> -->
       <!-- Start the map here -->
-      <google-map width="1000px" height="1000px" [center]="center" [zoom]="zoom"
+      <!-- <google-map width="1000px" height="1000px" [center]="mapCenter" [zoom]="zoom"
       (mapClick)="addMarker($event)"
       (mapMousemove)="move($event)"
-      >
+      > -->
 
       <!-- Add marker functionality -->
-      <map-marker
+      <!-- <map-marker
       #marker="mapMarker"
       *ngFor="let mPos of markerPositions"
       [position]="mPos"
       [options]="markerOptions"
+      (mapDragend)="onMapDragEnd($event)"
       (mapClick)="openInfoWindow(marker)"
-    >
+    > -->
 
         <!-- When clicked show the map info of the location -->
-        <map-info-window >
+        <!-- <map-info-window >
           <div class="marker-window">
             <h3>
               This is a location you selected
@@ -33,20 +42,20 @@
             </div>
           </div>
         </map-info-window>
-      </map-marker>
+      </map-marker> -->
 
     <!-- <map-polyline [path]="vertices"></map-polyline>
     <map-polygon [paths]="vertices"></map-polygon>
     <map-circle [center]="circleCenter" [radius]="radius"></map-circle>
     <map-rectangle [bounds]="bordersOrBounds"></map-rectangle>
     <map-ground-overlay [url]="imageUrl" [bounds]="bordersOrBounds"></map-ground-overlay> -->
-    </google-map>
+    <!-- </google-map> -->
     <!-- End of Google Maps -->
     </div>
 
     <div class="lglt">
-      <div>Longitude: {{display.lng}}</div>
-      <div>Latitude: {{display.lat}}</div>
+      <!-- <div>Longitude: {{display.lng}}</div>
+      <div>Latitude: {{display.lat}}</div> -->
     </div>
   </div>
 </div>

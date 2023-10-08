@@ -6,6 +6,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { MapMarkerComponent } from './components/map-marker/map-marker.component';
 import { MapPolylineComponent } from './components/map-polyline/map-polyline.component';
 import { MapPolygonComponent } from './components/map-polygon/map-polygon.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +22,8 @@ import { MapPolygonComponent } from './components/map-polygon/map-polygon.compon
   imports: [
     CommonModule,
     SharedModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    FormsModule
   ],
   exports:[LocationsComponent]
 })

@@ -1,1 +1,41 @@
-<p>shops works!</p>
+<div class="container">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="main-container">
+    <div class="side-nav">
+      <app-side-nav></app-side-nav>
+    </div>
+    <div class="main">
+      <app-spinner *ngIf="isLoading"></app-spinner>
+      <div class="container" *ngIf="!isLoading">
+        <div class="cat-title">Category 1 Shops</div>
+        <div class="shops">
+          <div class="swipe-back swipe-icon" (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </div>
+          <swiper-container #swiper [pagination]="true" [slidesPerView]="6">
+            <swiper-slide *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]">
+              <div class="card" (click)="navigate('shop/2','forward')">
+                <img src="../../../../../assets/images/1200px-Icons8_flat_shop.svg.png" />
+                <div class="details">
+                  <h1>Shop Name</h1>
+                  <div class="location">
+                    <span>Shop location</span>
+                    <ion-icon name="location-outline"></ion-icon>
+                  </div>
+                  <div class="category">
+                    <span>Category: Shop</span>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper-container>
+          <div class="swipe-forward swipe-icon" (click)="goNext()">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

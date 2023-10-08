@@ -11,6 +11,8 @@ import { TopWidgetComponent } from './components/top-widget/top-widget.component
 import { ChartModule } from 'angular-highcharts';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 
@@ -23,7 +25,9 @@ import { RouterModule } from '@angular/router';
     SalesByCategoryComponent,
     SalesByMonthComponent,
     TopThreeProductsComponent,
-    TopWidgetComponent
+    TopWidgetComponent,
+    SpinnerComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +43,9 @@ import { RouterModule } from '@angular/router';
     SalesByCategoryComponent,
     SalesByMonthComponent,
     TopThreeProductsComponent,
-    TopWidgetComponent
+    TopWidgetComponent,
+    SpinnerComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

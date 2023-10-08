@@ -7,7 +7,13 @@
       <app-side-nav></app-side-nav>
     </div>
     <div class="main">
-      <app-main></app-main>
+      <app-spinner *ngIf="isLoading"></app-spinner>
+
+      <app-main *ngIf="!isLoading"></app-main>
     </div>
   </div>
+  <ng-container>
+    <!-- <ion-icon></ion-icon> -->
+  </ng-container>
+
 </div>

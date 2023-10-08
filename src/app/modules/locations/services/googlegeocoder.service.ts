@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable, take } from 'rxjs';
-import { googlemapKey } from 'src/app/core/services/data.service';
+import { googlemapKey } from 'src/app/core/services/data/data.service';
 import { GeocoderResponse } from 'src/app/models/geocoder-response.model';
 // import { environment } from '';
 

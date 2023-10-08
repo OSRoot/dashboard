@@ -43,11 +43,11 @@
       transition: 0.2s;
       border-radius: 10px
     };
-    @media only screen and (max-width:1500px){
-      padding: 25px 40px;
-      transition: 0.2s;
-      border-radius: 10px
-    };
+    // @media only screen and (max-width:1500px){
+    //   padding: 25px 40px;
+    //   transition: 0.2s;
+    //   border-radius: 10px
+    // };
     &:hover{
       background: rgb(1, 38, 69);
       transition: 0.2s;
@@ -67,6 +67,10 @@
       font-size: 20px;
       font-family: "semibold";
       @media only screen and (max-width:1300px){
+        display: none;
+        transition: 0.2s;
+      };
+      @media only screen and (max-width:1400px){
         display: none;
         transition: 0.2s;
       };
