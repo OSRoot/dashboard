@@ -3,6 +3,9 @@
 //   //   // height: 40px;
 //   // }
 // }
+body {
+  overflow: auto;
+}
 .container{
   width: 100%;
   background: #eee;
@@ -15,7 +18,8 @@
     // // min-width: 100px;
 
   }
-  margin-top: 70px;
+    overflow: scroll;
+    margin-top: 70px;
   display: flex;
   .side-nav{
     width: 350px;

@@ -7,7 +7,9 @@
       <app-side-nav></app-side-nav>
     </div>
     <div class="main">
-      Contacts
+      <app-spinner *ngIf="isLoading"></app-spinner>
+
+      <button *ngIf="!isLoading" (click)="navigate('contact/3','forward')">Go to Contact details</button>
     </div>
   </div>
 </div>

@@ -53,6 +53,11 @@
 }
 html, body{
   scroll-behavior: smooth;
+  // overflow-y: scroll !important;
+}
+body{
+  scroll-behavior: smooth;
+  // overflow: scroll !important;
 }
 
 
@@ -122,6 +127,7 @@ html, body{
 
   }
   .main{
+    // height: 100vh;
     @media only screen and (max-width:1200px){
       width:100%;
       // margin: auto;

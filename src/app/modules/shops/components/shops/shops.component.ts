@@ -9,8 +9,10 @@ import Swiper from 'swiper';
   styleUrls: ['./shops.component.scss']
 })
 export class ShopsComponent implements OnInit {
-  @ViewChild('swiper',{ static: false })
-  swiperRef:ElementRef|undefined;
+  @ViewChild('shops',{ static: false })shops:ElementRef|undefined;
+  @ViewChild('Warehouse',{ static: false })Warehouse:ElementRef|undefined;
+  @ViewChild('Garage',{ static: false })Garage:ElementRef|undefined;
+
   swiper?:Swiper;
   faLocation = faLocationDot;
   faHome = faHome
@@ -27,17 +29,33 @@ export class ShopsComponent implements OnInit {
   }
     /////////////////////////////////////////////////////////
     swiperReady(){
-      this.swiper = this.swiperRef?.nativeElement.swiper;
+      this.swiper = this.shops?.nativeElement.swiper;
     }
     /////////////////////////////////////////////////////////
 
-    goNext(){
-    this.swiperRef?.nativeElement.swiper.slideNext(500);
+    goNext(val:string){
+      if(val==='shops'){
+          this.shops?.nativeElement.swiper.slideNext(500);
+      }
+      else if(val ==='warehouse'){
+        this.Warehouse?.nativeElement.swiper.slideNext(500);
+      }
+      else{
+        this.Garage?.nativeElement.swiper.slideNext(500);
+
+      }
     };
     /////////////////////////////////////////////////////////
-    goBack(){
-      this.swiperRef?.nativeElement.swiper.slidePrev(500);
-
+    goBack(val:string){
+      if(val==='shops'){
+        this.shops?.nativeElement.swiper.slidePrev(500);
+      }
+      else if (val ==='warehouse'){
+        this.Warehouse?.nativeElement.swiper.slidePrev(500);
+      }
+      else{
+        this.Garage?.nativeElement.swiper.slidePrev(500);
+      }
     };
     /////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////
