@@ -1,4 +1,6 @@
 # Dashboard (SSR Implementaion)
+# See This (Important)
+- `https://stackblitz.com/edit/angular-seo-service-9pogut?file=src%2Fapp%2Fconfig.ts`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
  - `Made as a demo of ssr`
